@@ -1,24 +1,35 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
 
 const faqs = [
   {
-    question: "СмартФлоу бесплатный?",
-    answer: "Да! Мы предлагаем бесплатный план с базовыми функциями для старта.",
-  },
-  {
-    question: "Можно ли отменить подписку в любое время?",
-    answer: "Да, вы можете отменить подписку в любой момент. Никаких долгосрочных обязательств.",
-  },
-  {
-    question: "Есть ли скидки для НКО и образовательных учреждений?",
+    question: "Нужно ли высшее образование, чтобы стать инженером по автоматизации?",
     answer:
-      "Да, мы предлагаем специальные условия для некоммерческих организаций и образовательных учреждений. Свяжитесь с нами для получения подробностей.",
+      "Не обязательно. Можно начать с колледжа или пройти профильные курсы. Однако высшее образование открывает двери в более крупные компании и даёт глубокую теоретическую базу для карьерного роста.",
   },
   {
-    question: "Какие интеграции поддерживает СмартФлоу?",
+    question: "Какой язык программирования нужно учить в первую очередь?",
     answer:
-      "СмартФлоу интегрируется с популярными инструментами: Slack, Google Workspace, Trello и многими другими. Полный список в документации.",
+      "Для ПЛК — это языки стандарта IEC 61131-3: Ladder Diagram (LD) и Structured Text (ST). Из классических языков: Python для автоматизации задач и C++ для встраиваемых систем. Начните с Ladder — он самый распространённый в производстве.",
+  },
+  {
+    question: "Сколько времени нужно, чтобы выйти на зарплату 100 000+ рублей?",
+    answer:
+      "Обычно 3–5 лет практического опыта. При наличии высшего образования и активном саморазвитии (сертификаты Siemens, SCADA-системы) — возможно быстрее.",
+  },
+  {
+    question: "Можно ли работать удалённо инженером по автоматизации?",
+    answer:
+      "Частично. Проектирование, программирование ПЛК и разработка документации можно делать удалённо. Но наладка, запуск и техническое обслуживание оборудования требуют физического присутствия на объекте.",
+  },
+  {
+    question: "Какие сертификаты повышают стоимость специалиста?",
+    answer:
+      "Siemens SIMATIC, Schneider Electric, ABB Robotics, Rockwell Automation, сертификаты по SCADA-системам (WinCC, Wonderware). Международные сертификаты особенно ценятся при работе на зарубежных проектах.",
+  },
+  {
+    question: "В чём разница между инженером КИПиА и инженером по автоматизации?",
+    answer:
+      "КИПиА (контрольно-измерительные приборы и автоматика) — более узкая специализация, фокус на измерительных приборах и регуляторах. Инженер по автоматизации — шире: включает проектирование систем управления, программирование, робототехнику и интеграцию систем.",
   },
 ]
 
@@ -27,15 +38,12 @@ export function FaqSection1() {
     <section className="bg-background py-16 md:py-24" aria-labelledby="faq-heading">
       <div className="max-w-2xl gap-12 mx-auto px-6 flex flex-col">
         <div className="flex flex-col text-center gap-5">
-          <p className="text-sm md:text-base text-muted-foreground font-semibold">Вопросы</p>
+          <p className="text-sm md:text-base text-muted-foreground font-semibold">Вопросы и ответы</p>
           <h1 id="faq-heading" className="text-3xl md:text-4xl font-bold text-foreground">
-            Есть вопросы? У нас есть ответы.
+            Частые вопросы о профессии
           </h1>
           <p className="text-muted-foreground">
-            Мы собрали самую важную информацию, чтобы помочь вам. Не нашли ответ?{" "}
-            <a href="#" className="text-primary underline">
-              Свяжитесь с нами.
-            </a>
+            Собрали самые популярные вопросы от тех, кто хочет войти в профессию
           </p>
         </div>
 
@@ -47,16 +55,6 @@ export function FaqSection1() {
             </AccordionItem>
           ))}
         </Accordion>
-
-        <div className="bg-muted/60 w-full rounded-xl p-6 md:p-8 flex flex-col items-center gap-6">
-          <div className="flex flex-col text-center gap-2">
-            <h2 className="text-2xl font-bold text-foreground">Остались вопросы?</h2>
-            <p className="text-base text-muted-foreground">
-              Нужна помощь или консультация? Наша команда всегда готова помочь!
-            </p>
-          </div>
-          <Button aria-label="Связаться с поддержкой">Написать нам</Button>
-        </div>
       </div>
     </section>
   )

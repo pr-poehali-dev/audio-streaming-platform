@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const MENU_ITEMS = [
-  { label: "Возможности", href: "#" },
-  { label: "Отзывы", href: "#" },
-  { label: "Тарифы", href: "#" },
-  { label: "Вопросы", href: "#" },
+  { label: "Обязанности", href: "#" },
+  { label: "Навыки", href: "#" },
+  { label: "Зарплата", href: "#" },
+  { label: "Обучение", href: "#" },
 ] as const
 
 interface NavMenuItemsProps {
@@ -48,20 +48,18 @@ export function LpNavbar1() {
           </Button>
         </div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex flex-row gap-5 w-full justify-end">
           <NavMenuItems />
           <a href="#">
-            <Button>Начать</Button>
+            <Button>Войти в профессию</Button>
           </a>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden flex flex-col gap-5 w-full justify-end pb-2.5">
             <NavMenuItems />
             <a href="#">
-              <Button className="w-full">Начать</Button>
+              <Button className="w-full">Войти в профессию</Button>
             </a>
           </div>
         )}
